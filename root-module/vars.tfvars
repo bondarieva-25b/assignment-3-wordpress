@@ -14,3 +14,7 @@ priv_sub = {
     }
 igw_name = "wordpress-igw"
 rt_name = "wordpress-rt"
+ec2_instance_ami = "ami-052064a798f08f0d3"
+ec2_instance_type = "t3.micro"
+ec2_instance_key = "test_nadiia"
+ec2_instance_name = "wordpress-ec2"

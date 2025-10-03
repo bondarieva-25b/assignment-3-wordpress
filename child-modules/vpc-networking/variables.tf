@@ -21,4 +21,3 @@ variable "igw_name" {
 variable "rt_name" {
     type = string
 }
-

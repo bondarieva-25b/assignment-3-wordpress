@@ -1,0 +1,16 @@
+locals {
+  first_pub_subnet_id = aws_subnet.pub-sub[ keys(aws_subnet.pub-sub)[0] ].id
+}
+
+resource "aws_instance" "ec2" {
+  depends_on = [ aws_security_group.sg ]
+  ami           = var.ec2_instance_ami
+  instance_type = var.ec2_instance_type
+  vpc_security_group_ids = [aws_security_group.sg.id]
+  key_name = var.ec2_instance_key
+  subnet_id = local.first_pub_subnet_id
+
+  tags = {
+    Name = var.ec2_instance_name
+  }
+}
