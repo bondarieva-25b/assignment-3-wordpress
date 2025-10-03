@@ -13,3 +13,4 @@ priv_sub = {
     wordpress-3 = "10.0.6.0/24"
     }
 igw_name = "wordpress-igw"
+rt_name = "wordpress-rt"

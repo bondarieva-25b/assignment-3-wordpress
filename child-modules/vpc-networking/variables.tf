@@ -17,3 +17,8 @@ variable "priv_sub" {
 variable "igw_name" {
     type = string
 }
+
+variable "rt_name" {
+    type = string
+}
+

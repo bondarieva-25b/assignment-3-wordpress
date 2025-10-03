@@ -5,4 +5,5 @@ module "vpc-networking" {
   pub_sub  = var.pub_sub
   priv_sub = var.priv_sub
   igw_name = var.igw_name
+  rt_name  = var.rt_name
 } 
