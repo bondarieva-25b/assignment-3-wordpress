@@ -1,5 +1,5 @@
 locals {
-  first_pub_subnet_id = aws_subnet.pub-sub[ keys(aws_subnet.pub-sub)[0] ].id
+  first_pub_subnet_id = var.subnets[0]
 }
 
 resource "aws_instance" "ec2" {

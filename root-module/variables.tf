@@ -45,3 +45,16 @@ variable "ec2_instance_key" {
 variable "ec2_instance_name" {
   type = string
 }
+
+variable "ec2_sg_name" {
+  type = string
+}
+
+variable "ec2_sg_description" {
+  type = string
+}
+
+variable "ec2_sg_allowed_ports" {
+  description = "Map of ports and their descriptions"
+  type = map(string)
+}

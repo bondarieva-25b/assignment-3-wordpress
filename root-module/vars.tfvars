@@ -18,3 +18,10 @@ ec2_instance_ami = "ami-052064a798f08f0d3"
 ec2_instance_type = "t3.micro"
 ec2_instance_key = "test_nadiia"
 ec2_instance_name = "wordpress-ec2"
+ec2_sg_name = "wordpress-sg"
+ec2_sg_description = "Allow SSH HTTP HTTPS inbound traffic"
+ec2_sg_allowed_ports = {
+    22  = "ssh from everyone"
+    80  = "http from everyone"
+    443 = "https from everyone"
+  }
