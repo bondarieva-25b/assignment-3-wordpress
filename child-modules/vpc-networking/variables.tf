@@ -13,3 +13,7 @@ variable "pub_sub" {
 variable "priv_sub" {
   type = map
 }
+
+variable "igw_name" {
+    type = string
+}
