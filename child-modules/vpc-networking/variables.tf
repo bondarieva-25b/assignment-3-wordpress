@@ -5,3 +5,11 @@ variable "vpc_name" {
 variable "vpc_cidr" {
     type = string
 }
+
+variable "pub_sub" {
+  type = map
+}
+
+variable "priv_sub" {
+  type = map
+}
