@@ -1,64 +1,3 @@
-variable "region" {
-    type = string
-}
-
-variable "iam_profile" {
-    type = string
-}
-
-variable "vpc_name" {
-    type = string
-}
-
-variable "vpc_cidr" {
-    type = string
-}
-
-variable "pub_sub" {
-  type = map
-}
-
-variable "priv_sub" {
-  type = map
-}
-
-variable "igw_name" {
-    type = string
-}
-
-variable "rt_name" {
-    type = string
-}
-
-variable "ec2_instance_ami" {
-  type = string
-}
-
-variable "ec2_instance_type" {
-  type = string
-}
-
-variable "ec2_instance_key" {
-  type = string
-}
-
-variable "ec2_instance_name" {
-  type = string
-}
-
-variable "ec2_sg_name" {
-  type = string
-}
-
-variable "ec2_sg_description" {
-  type = string
-}
-
-variable "ec2_sg_allowed_ports" {
-  description = "Map of ports and their descriptions"
-  type = map(string)
-}
-
 variable rds_name {
   description = "The name of the RDS instance"
   type        = string
@@ -99,9 +38,29 @@ variable mysql_pass {
   type        = string
 }
 
+variable rds_db_name {
+  description = "The name of the database"
+  type        = string
+}
+
 variable rds_sub_group_name {
   description = "The name of the DB subnet group"
   type        = string
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "The VPC ID for the security group"
+}
+
+variable "priv_subnet_ids" {
+  description = "List of private subnets for the DB subnet group"
+  type        = list(string)
+}
+
+variable "subnets" {
+  type        = list(string)
+  description = "List of private subnet IDs where RDS instance can be launched"
 }
 
 variable "rds_sg_name" {
@@ -120,7 +79,7 @@ variable rds_sg_port {
     default     = 3306
 }
 
-variable rds_db_name {
-  description = "The name of the database"
+variable "ec2_sg_id" {
+  description = "The security group ID of the EC2 instances allowed to access RDS"
   type        = string
 }

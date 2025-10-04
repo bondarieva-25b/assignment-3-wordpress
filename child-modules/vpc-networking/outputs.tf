@@ -6,3 +6,6 @@ output "public_subnet_ids" {
   value = [for s in aws_subnet.pub-sub : s.id]
 }
 
+output "private_subnet_ids" {
+  value = [for s in aws_subnet.priv-sub : s.id]
+}
