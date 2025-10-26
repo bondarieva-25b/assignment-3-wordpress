@@ -1,7 +1,7 @@
 region      = "us-east-1"
 iam_profile = "default"
 vpc_cidr    = "10.0.0.0/16"
-vpc_name    = "test2-wordpress-vpc"
+vpc_name    = "test3-wordpress-vpc"
 pub_sub = {
   wordpress-1 = { cidr = "10.0.1.0/24", az = "us-east-1a" }
   wordpress-2 = { cidr = "10.0.2.0/24", az = "us-east-1b" }
