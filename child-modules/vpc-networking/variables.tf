@@ -1,9 +1,9 @@
 variable "vpc_name" {
-    type = string
+  type = string
 }
 
 variable "vpc_cidr" {
-    type = string
+  type = string
 }
 
 # variable "pub_sub" {
@@ -27,9 +27,9 @@ variable "priv_sub" {
 }
 
 variable "igw_name" {
-    type = string
+  type = string
 }
 
 variable "rt_name" {
-    type = string
+  type = string
 }
