@@ -24,7 +24,7 @@ variable "ec2_sg_description" {
 
 variable "ec2_sg_allowed_ports" {
   description = "Map of ports and their descriptions"
-  type = map(string)
+  type        = map(string)
 }
 
 variable "vpc_id" {
